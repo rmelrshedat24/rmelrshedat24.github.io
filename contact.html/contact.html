@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Me - Raneem</title>
+<style>
+body {
+  background-color: #f5efe6;
+  font-family: Arial;
+}
+h1 {
+  color: #8b6f47;
+}
+</style>
+<script>
+function checkForm() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var country = document.getElementById("country").value;
+  var comment = document.getElementById("comment").value;
+
+  if (name == "" || email == "" || country == "" || comment == "") {
+    alert("Please fill in all fields.");
+    return false;
+  }
+  alert("Thank you! Your form was sent.");
+  return false;
+}
+</script>
+</head>
+<body>
+
+<a href="index.html">Home</a>
+<a href="contact.html">Contact Me</a>
+
+<h1>Contact Me</h1>
+<form onsubmit="return checkForm()">
+  Full Name:<br>
+  <input type="text" id="name"><br><br>
+
+  Email Address:<br>
+  <input type="text" id="email"><br><br>
+
+  Country:<br>
+  <input type="text" id="country"><br><br>
+
+  Comments:<br>
+  <textarea id="comment"></textarea><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
